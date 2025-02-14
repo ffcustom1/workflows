@@ -1,0 +1,212 @@
+{
+  "last_node_id": 4,
+  "last_link_id": 2,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "TagsSelector",
+      "pos": [
+        297.1166076660156,
+        494.2471923828125
+      ],
+      "size": [
+        315,
+        154
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "tags_list",
+          "type": "LIST",
+          "link": 1
+        },
+        {
+          "name": "prefix",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "prefix"
+          },
+          "shape": 7
+        },
+        {
+          "name": "suffix",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "suffix"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TagsSelector"
+      },
+      "widgets_values": [
+        ":",
+        1,
+        true,
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoraLoaderStackedAdvanced",
+      "pos": [
+        -119.88339233398438,
+        596.2471923828125
+      ],
+      "size": [
+        355.20001220703125,
+        238
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "override_lora_name",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "override_lora_name"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "civitai_tags_list",
+          "type": "LIST",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "meta_tags_list",
+          "type": "LIST",
+          "links": null
+        },
+        {
+          "name": "LORA_STACK",
+          "type": "LORA_STACK",
+          "links": null
+        },
+        {
+          "name": "lora_name",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderStackedAdvanced"
+      },
+      "widgets_values": [
+        {
+          "content": "Light%20and%20Shadow.safetensors",
+          "image": null,
+          "type": "loras"
+        },
+        1,
+        false,
+        false,
+        false,
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ShowText|pysssss",
+      "pos": [
+        710.1165771484375,
+        546.2471923828125
+      ],
+      "size": [
+        315,
+        76
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "starry,strry light,night,colorful,cloud,star \\(sky\\),"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "LIST"
+    ],
+    [
+      2,
+      3,
+      0,
+      2,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        398.88339400312475,
+        -373.6805257087168
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-Lora-Auto-Trigger-Words": "52157dff5ad65d370b1de05013f940cb79329ec7",
+      "ComfyUI-Custom-Scripts": "bc8922deff73f59311c05cef27b9d4caaf43e87b"
+    }
+  },
+  "version": 0.4
+}

@@ -1,0 +1,192 @@
+{
+  "last_node_id": 15,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "LoraTagsOnly",
+      "pos": [
+        232.3981475830078,
+        166.7170867919922
+      ],
+      "size": [
+        315,
+        150
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "override_lora_name",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "override_lora_name"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "civitai_tags_list",
+          "type": "LIST",
+          "links": [
+            10
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "meta_tags_list",
+          "type": "LIST",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraTagsOnly"
+      },
+      "widgets_values": [
+        "2BoutOvalFlux1-1400steps.safetensors",
+        false,
+        false,
+        ""
+      ]
+    },
+    {
+      "id": 11,
+      "type": "TagsSelector",
+      "pos": [
+        660.6044311523438,
+        147.39952087402344
+      ],
+      "size": [
+        315,
+        154
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "tags_list",
+          "type": "LIST",
+          "link": 10
+        },
+        {
+          "name": "prefix",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "prefix"
+          },
+          "shape": 7
+        },
+        {
+          "name": "suffix",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "suffix"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            12
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TagsSelector"
+      },
+      "widgets_values": [
+        ":",
+        1,
+        true,
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 15,
+      "type": "ttN textDebug",
+      "pos": [
+        1049.6043701171875,
+        100.39952850341797
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 12,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ttN textDebug"
+      },
+      "widgets_values": [
+        false,
+        "",
+        "Always",
+        "",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      10,
+      10,
+      0,
+      11,
+      0,
+      "LIST"
+    ],
+    [
+      12,
+      11,
+      0,
+      15,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -240.6044045454546,
+        104.60047181818197
+      ]
+    },
+    "node_versions": {
+      "comfyui-lora-auto-trigger-words": "1.0.4",
+      "comfyui_tinyterranodes": "2.0.5"
+    }
+  },
+  "version": 0.4
+}
